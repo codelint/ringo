@@ -1,0 +1,21 @@
+{
+    "name": "codelint/ringo",
+    "description": "log/notify for laravel project",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^8.65"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codelint\\Ringo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Codelint",
+            "email": "codelint@foxmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
