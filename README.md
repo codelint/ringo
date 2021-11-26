@@ -23,16 +23,16 @@ RINGO_NOTIFY_MAIL=notify@example.com
 ```php
 Ringo::info("hello world");
 Ringo::warning("hello world");
-Ringo::alert("hello world");						// will trigger mail & wecorp notify
-Ringo::error("hello world");						// will trigger mail & wecorp notify
+Ringo::alert("hello world"); // will trigger mail & wecorp notify
+Ringo::error("hello world"); // will trigger mail & wecorp notify
 ```
 
 ##### 发送邮件通知
 
 ```php
-Ringo::mail("message", ["ext" => "hello"], ["test@example.com"]); 					// no log file
-Ringo::mail(new Exception("hello world"), ["test@example.com"]); 						// no log file
-Ringo::notify(new Exception("hello world"), ["test@example.com"]); 					// with info log
+Ringo::mail("message", ["ext" => "hello"], ["test@example.com"]); // no log file
+Ringo::mail(new Exception("hello world"), ["test@example.com"]); // no log file
+Ringo::notify(new Exception("hello world"), ["test@example.com"]); // with info log
 // 给企业邮箱 $mailName@RINGO_MAIL_DOMAIN 发送notify信息
 Ringo::notify$mailName("message", ["ext" => "hello"], ["test@example.com"]);	
 ```
