@@ -28,7 +28,7 @@ class MessageMail extends Mailable {
      */
     public function __construct($message = '', $detail = '', $env = null)
     {
-        $this->onConnection('logger');
+        $this->onConnection(env('RINGO_JOB_CONNECTION'));
         $this->msg = strval($message);
         $this->detail = $detail;
         $this->create_time = time();

@@ -55,7 +55,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
 
         $this->meta = $meta;
 
-        $this->onConnection(env('RINGO_WECORP_JOB_CONNECTION', 'database'));
+        $this->onConnection(env('RINGO_JOB_CONNECTION'));
     }
 
     //{

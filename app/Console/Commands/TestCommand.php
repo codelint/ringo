@@ -39,7 +39,7 @@ class TestCommand extends Command
     public function handle()
     {
         Ringo::info('hello world');
-        Ringo::weCorp('hello world');
+        Ringo::mail('hello world');
         return Command::SUCCESS;
     }
 }

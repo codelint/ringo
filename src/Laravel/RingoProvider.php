@@ -18,7 +18,7 @@ class RingoProvider  extends ServiceProvider {
 
     protected function base_dir($path)
     {
-        return __DIR__ . '/../' . $path;
+        return __DIR__ . '/../../' . $path;
     }
 
     public function register()
