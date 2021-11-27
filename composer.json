@@ -8,12 +8,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Codelint\\Ringo\\": "src/"
+            "Codelint\\Ringo\\": "src/",
+            "App\\": "app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\": "App/"
+            "App\\": "app/"
         }
     },
     "authors": [

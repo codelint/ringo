@@ -507,12 +507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "9d902d3581ac32549d02058b04b6a1944ff198ed"
+                "reference": "78637dcc784e8c85e08490d47098cd7531dcaa81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/9d902d3581ac32549d02058b04b6a1944ff198ed",
-                "reference": "9d902d3581ac32549d02058b04b6a1944ff198ed",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/78637dcc784e8c85e08490d47098cd7531dcaa81",
+                "reference": "78637dcc784e8c85e08490d47098cd7531dcaa81",
                 "shasum": ""
             },
             "require": {
@@ -672,7 +672,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-11-25T15:33:13+00:00"
+            "time": "2021-11-26T15:44:39+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -680,12 +680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "8148e72e6c2c3af7f05640ada1b26c3bca970f8d"
+                "reference": "382e77dfa87dff827071bb54098a97baf9a97200"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/8148e72e6c2c3af7f05640ada1b26c3bca970f8d",
-                "reference": "8148e72e6c2c3af7f05640ada1b26c3bca970f8d",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/382e77dfa87dff827071bb54098a97baf9a97200",
+                "reference": "382e77dfa87dff827071bb54098a97baf9a97200",
                 "shasum": ""
             },
             "require": {
@@ -732,7 +732,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2021-11-16T17:01:57+00:00"
+            "time": "2021-11-26T17:43:30+00:00"
         },
         {
             "name": "league/commonmark",
@@ -740,12 +740,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "c0ae075276d9e78f9a396ed92ef239af68c24afb"
+                "reference": "0fd278c35138a9dff47810c62062119693a43f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c0ae075276d9e78f9a396ed92ef239af68c24afb",
-                "reference": "c0ae075276d9e78f9a396ed92ef239af68c24afb",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/0fd278c35138a9dff47810c62062119693a43f1d",
+                "reference": "0fd278c35138a9dff47810c62062119693a43f1d",
                 "shasum": ""
             },
             "require": {
@@ -836,7 +836,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-24T19:23:13+00:00"
+            "time": "2021-11-25T19:16:54+00:00"
         },
         {
             "name": "league/config",
@@ -927,12 +927,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8f7d625f7b87ecad321b648f0e9a2c4262aed262"
+                "reference": "3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8f7d625f7b87ecad321b648f0e9a2c4262aed262",
-                "reference": "8f7d625f7b87ecad321b648f0e9a2c4262aed262",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d",
+                "reference": "3ca8f158ee21efa4bbd4f74bea5730c9b9261e2d",
                 "shasum": ""
             },
             "require": {
@@ -1013,7 +1013,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-11-21T13:50:21+00:00"
+            "time": "2021-11-25T19:40:58+00:00"
         },
         {
             "name": "league/mime-type-detection",
