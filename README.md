@@ -8,12 +8,13 @@ composer require codelint/ringo
 
 ```properties
 RINGO_WECORP_CHAT_ID=ringo
+RINGO_WECORP_CHAT_UIDS=gzhang
 RINGO_WECORP_ID=****
 RINGO_WECORP_SECRET=****
-RINGO_WECORP_JOB_CONNECTION=database
 RINGO_ALERT_MAIL=unotseeme@foxmail.com
 RINGO_MAIL_DOMAIN=example.com
 RINGO_NOTIFY_MAIL=notify@example.com
+RINGO_JOB_CONNECTION=sync
 ```
 
 ### Usage
