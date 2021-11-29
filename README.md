@@ -7,6 +7,16 @@ composer require codelint/ringo
 ### Configuration
 
 ```properties
+# use laravel global mail function to mail
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.example.com
+MAIL_PORT=465
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM_NAME=
+MAIL_FROM_ADDRESS=
+MAIL_ENCRYPTION=ssl
+
 RINGO_WECORP_CHAT_ID=ringo
 RINGO_WECORP_CHAT_UIDS=gzhang
 RINGO_WECORP_ID=****
