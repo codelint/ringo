@@ -49,4 +49,6 @@ Ringo::we$group("send message to a theme", ["ext" => "hello"])
 ##### 默认发送
 
 
+### Reference
+* https://packagist.org/packages/codelint/ringo
 
