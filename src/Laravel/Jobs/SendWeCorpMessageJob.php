@@ -13,6 +13,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Log;
 
 class SendWeCorpMessageJob implements ShouldQueue {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
@@ -85,6 +86,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
             }
             else
             {
+                Log::info('Create channel[' . $this->chat_id . '] for wecorp users(' . env('RINGO_WECORP_INIT_UIDS') . ') failed!!!');
                 return;
             }
         }
