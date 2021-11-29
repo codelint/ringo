@@ -86,7 +86,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
             }
             else
             {
-                Log::info('Create channel[' . $this->chat_id . '] for wecorp users(' . env('RINGO_WECORP_INIT_UIDS') . ') failed!!!');
+                Log::info('Create channel[' . $this->chat_id . '] for wecorp users(' . env('RINGO_WECORP_CHAT_UIDS') . ') failed!!!');
                 return;
             }
         }
