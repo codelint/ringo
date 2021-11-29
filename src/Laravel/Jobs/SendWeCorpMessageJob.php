@@ -168,11 +168,8 @@ class SendWeCorpMessageJob implements ShouldQueue {
     private function getMsgData($message, $info = [])
     {
         $url = Arr::get($info, 'url', Arr::get($info, 'link', null));
-        $url = !$url && isset($info['product_id']) ? "http://m.samulala.com/#/detail/${info['product_id']}" : $url;
 
         $image = Arr::get($info, 'image', null);
-//        $image = !$image && isset($info['product_id']) ? route('product.image', array('product_id' => $info['product_id'])) : $image;
-        $image = !$image && isset($info['product_id']) ? 'http://iot.triplint.com/product/'.$info['product_id'].'/image-0.jpg' : $image;
 
         if(!$url && count($info) > 1)
         {
@@ -183,7 +180,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
             );
             $key = 'wx-msg-' . md5(json_encode($url_data));
             cache()->put($key , json_encode($url_data), 86400*21);
-            $url = url('/base/message/view/' . $key);
+            $url = url('/ringo/message/view/' . $key);
         }
 
         if ($url && $image)

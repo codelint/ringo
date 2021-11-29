@@ -1,7 +1,9 @@
 <?php namespace Codelint\Ringo\Laravel;
 
 use Codelint\Ringo\RingoLogger;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 /**
  * RingoProvider:
@@ -9,7 +11,7 @@ use Illuminate\Support\ServiceProvider;
  * @time 15:05
  * @author Ray.Zhang <codelint@foxmail.com>
  **/
-class RingoProvider  extends ServiceProvider {
+class RingoProvider extends ServiceProvider {
 
     public function ns()
     {
@@ -31,5 +33,13 @@ class RingoProvider  extends ServiceProvider {
     public function boot()
     {
         $this->loadViewsFrom($this->base_dir('resources/views'), $this->ns());
+        $this->mapWebRoutes();
+    }
+
+    protected function mapWebRoutes()
+    {
+        Route::middleware('web')
+            ->namespace(Str::ucfirst($this->ns()) . '\Http\Controllers')
+            ->group($this->base_dir('routes/web.php'));
     }
 }
