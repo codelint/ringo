@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Facade;
  * @method static void error(string $message, array $info = [])
  * @method static void weCorp(string $message, array $info = [])
  * @method static void weError(string $message, array $info = [])
- * @method static void weProduct(string $message, array $info = [])
- * @method static void weOrder(string $message, array $info = [])
  * @method static void exception(\Exception $exception)
  **/
 class Ringo extends Facade {
