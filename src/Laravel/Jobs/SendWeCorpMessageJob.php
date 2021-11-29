@@ -128,6 +128,11 @@ class SendWeCorpMessageJob implements ShouldQueue {
 //            'chat_id' => $channel_id
 //        ), 'get');
 
+        if (!($res && $res['errmsg'] == 'ok'))
+        {
+            Log::error(json_encode($res));
+        }
+        
         return $res && $res['errmsg'] == 'ok';
     }
 
