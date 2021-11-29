@@ -19,7 +19,7 @@ MAIL_FROM_ADDRESS=
 MAIL_ENCRYPTION=ssl
 
 RINGO_WECORP_CHAT_ID=ringo
-# must to uid, else can't not create the chat[ringo] auto
+# must uid must more than 1 (at least 2), else can't not create the chat[ringo] auto
 RINGO_WECORP_CHAT_UIDS=gzhang,dev
 RINGO_WECORP_ID=****
 RINGO_WECORP_SECRET=****
