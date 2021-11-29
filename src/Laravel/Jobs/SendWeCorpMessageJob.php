@@ -76,10 +76,16 @@ class SendWeCorpMessageJob implements ShouldQueue {
         $chat_ids = cache()->get('base.Service.Logger.wx.chat_ids', []);
         if (!Arr::has($chat_ids, $this->chat_id))
         {
-            if ($this->genChannel($this->chat_id, ['gzhang', 'dev']))
+            $user_ids = env('RINGO_WECORP_INIT_UIDS');
+            $user_ids = $user_ids ? explode(',', $user_ids) : [];
+            if (count($user_ids) > 0 && $this->genChannel($this->chat_id, $user_ids))
             {
                 $chat_ids[] = $this->chat_id;
                 cache()->put('base.Service.Logger.wx.chat_ids', $chat_ids);
+            }
+            else
+            {
+                return;
             }
         }
         $this->wx($this->message, $this->detail);
