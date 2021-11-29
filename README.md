@@ -7,6 +7,7 @@ composer require codelint/ringo
 ### Configuration
 
 ```properties
+# add to .env file
 # use laravel global mail function to mail
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.example.com
