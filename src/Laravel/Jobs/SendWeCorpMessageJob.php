@@ -37,8 +37,8 @@ class SendWeCorpMessageJob implements ShouldQueue {
         $this->message = $message;
         $this->detail = $info;
         $this->chat_id = env('RINGO_WECORP_CHAT_ID', 'ringo');
-        $this->corp_id = env('RINGO_WECORP_ID', 'ww5c9dc4c8a5bc5399');
-        $this->secret = env('RINGO_WECORP_SECRET', 'fyLhYuFBcz7IbTaJ1Ck7tgLyID2C6UKK63Vy05MqI5s');
+        $this->corp_id = env('RINGO_WECORP_ID', '');
+        $this->secret = env('RINGO_WECORP_SECRET', '');
 
         $meta = array(
             'host' => gethostname(),
