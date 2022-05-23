@@ -210,7 +210,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
                 'msgtype' => 'textcard',
                 'textcard' => array(
                     'title' => $message,
-                    'description' => 'from ' . gethostname(),
+                    'description' => Arr::get($info, '_summary', 'from ' . gethostname()),
                     'url' => $url,
                     'btntxt' => '更多',
                 ),
