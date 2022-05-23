@@ -176,7 +176,9 @@ class SendWeCorpMessageJob implements ShouldQueue {
 
         $image = Arr::get($info, 'image', null);
 
-        if(!$url && count($info) > 1)
+        $summary = Arr::get($info, '_summary', 'from ' . gethostname());
+
+        if(!$url && count($info) > ($summary ? 2 : 1))
         {
             $url_data = array(
                 'message' => $message,
@@ -210,7 +212,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
                 'msgtype' => 'textcard',
                 'textcard' => array(
                     'title' => $message,
-                    'description' => Arr::get($info, '_summary', 'from ' . gethostname()),
+                    'description' => $summary,
                     'url' => $url,
                     'btntxt' => '更多',
                 ),
