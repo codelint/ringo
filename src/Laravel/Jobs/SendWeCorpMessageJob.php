@@ -178,7 +178,7 @@ class SendWeCorpMessageJob implements ShouldQueue {
 
         $summary = Arr::get($info, '_summary', 'from ' . gethostname());
 
-        if(!$url && count($info) > ($summary ? 2 : 1))
+        if(!$url && count($info) > ($summary ? 2 : 1) && 'on' == strtolower(env('RINGO_MSG_DETAIL', 'on')))
         {
             $url_data = array(
                 'message' => $message,
