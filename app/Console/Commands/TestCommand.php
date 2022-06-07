@@ -53,7 +53,7 @@ class TestCommand extends Command
                 break;
             case 'chat':
                 $uid = $this->option('uid');
-                Ringo::weChat($uid, 'hello world');
+                Ringo::weChat($uid, 'hello world', ['_summary' => 'wtf', 'title' => 'abc', 'abc' => 'bdc']);
                 break;
         }
 
