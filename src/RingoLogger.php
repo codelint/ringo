@@ -1,5 +1,6 @@
 <?php namespace Codelint\Ringo;
 
+use Codelint\Ringo\Laravel\Jobs\SendCorpChatMessageJob;
 use Codelint\Ringo\Laravel\Jobs\SendWeCorpMessageJob;
 use Codelint\Ringo\Laravel\Mails\MessageMail;
 use Illuminate\Support\Facades\Log;
@@ -95,6 +96,12 @@ class RingoLogger {
     {
         dispatch(new SendWeCorpMessageJob($message, $info));
     }
+
+    public function weChat($uid, $message, $info = [])
+    {
+        dispatch(new SendCorpChatMessageJob($uid, $message, $info));
+    }
+
 
     public function __call($name, $arguments)
     {

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static void alert(string $message, array $info = [])
  * @method static void error(string $message, array $info = [])
  * @method static void weCorp(string $message, array $info = [])
+ * @method static void weChat(string $uid, string $message, array $info = [])
  * @method static void weError(string $message, array $info = [])
  * @method static void exception(\Exception $exception)
  **/
