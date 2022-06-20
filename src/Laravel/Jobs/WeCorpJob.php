@@ -65,12 +65,12 @@ abstract class WeCorpJob implements ShouldQueue {
     protected function getMsgData($message, $info = [])
     {
         $url = Arr::get($info, 'url', Arr::get($info, 'link', null));
-
         $image = Arr::get($info, 'image', null);
+        $summary = Arr::get($info, 'description');
+        $summary = $summary ?: Arr::get($info, '_summary', 'from ' . gethostname());
+        $btntxt = Arr::get($info, 'button', '更多');
 
-        $summary = Arr::get($info, '_summary', 'from ' . gethostname());
-
-        if (!$url && count($info) > ($summary ? 2 : 1) && 'on' == strtolower(env('RINGO_MSG_DETAIL', 'on')))
+        if (!$url && count($info) > 1 && 'on' == strtolower(env('RINGO_MSG_DETAIL', 'on')))
         {
             $url_data = array(
                 'message' => $message,
@@ -106,7 +106,7 @@ abstract class WeCorpJob implements ShouldQueue {
                     'title' => $message,
                     'description' => $summary,
                     'url' => $url,
-                    'btntxt' => '更多',
+                    'btntxt' => $btntxt,
                 ),
             );
         }
