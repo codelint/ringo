@@ -131,8 +131,15 @@ class SendWeCorpMessageJob extends WeCorpJob {
 
             $res = $this->callOnce($url, $params, 'post');
             // {"errcode":0,"errmsg":"ok"}
-            Log::info(json_encode($res));
-            return $res && $res['errmsg'] == 'ok';
+            if ($res && $res['errmsg'] == 'ok')
+            {
+                return true;
+            }
+            else
+            {
+                Log::info(json_encode($res));
+                return false;
+            }
         }
 
         return false;

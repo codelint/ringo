@@ -72,9 +72,11 @@ abstract class WeCorpJob implements ShouldQueue {
 
         if (!$url && count($info) > 1 && 'on' == strtolower(env('RINGO_MSG_DETAIL', 'on')))
         {
+            $view = Arr::get($info, '_view');
             $url_data = array(
                 'message' => $message,
                 'detail' => $info,
+                'view' => $view,
                 'meta' => $this->meta
             );
             $key = 'wx-msg-' . md5(json_encode($url_data));
