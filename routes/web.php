@@ -10,7 +10,7 @@ Route::get('/ringo/message/view/{view_id}', function($view_id){
             $extra[$k] = $v;
         }
     }
-    return view('ringo::sample.info')
+    return view($data['_view'] ?? 'ringo::sample.info')
         ->with('message', \Illuminate\Support\Arr::get($data, 'message', $view_id))
         ->with('detail', $detail)
         ->with('extra', $extra)
