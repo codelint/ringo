@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Codelint\Ringo\Laravel\Facade\Cache;
 use Codelint\Ringo\Laravel\Facade\Ringo;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -55,6 +56,18 @@ class TestCommand extends Command
                 $uid = $this->option('uid');
                 Ringo::weChat($uid, 'hello world', ['_summary' => 'wtf', 'title' => 'abc', 'abc' => 'bdc']);
                 break;
+            case 'cache':
+                Cache::put('a', [
+                    'b' => 1,
+                    'arr' => [1, 2, 3],
+                    'dict' => [
+                        'a' => 1,
+                        'b' => '123'
+                    ]
+                ]);
+                $d = Cache::get('a');
+
+                $this->info(json_encode($d));
         }
 
         return Command::SUCCESS;

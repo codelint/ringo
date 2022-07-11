@@ -1,5 +1,6 @@
 <?php namespace Codelint\Ringo\Laravel\Jobs;
 
+use Codelint\Ringo\Laravel\Facade\Cache;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -80,7 +81,8 @@ abstract class WeCorpJob implements ShouldQueue {
                 'meta' => $this->meta
             );
             $key = 'wx-msg-' . md5(json_encode($url_data));
-            cache()->put($key, json_encode($url_data), 86400 * 21);
+            Cache::put($key, $url_data, 86400 * 21);
+            // cache()->put($key, json_encode($url_data), 86400 * 21);
             $url = url('/ringo/message/view/' . $key);
         }
 

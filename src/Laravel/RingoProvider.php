@@ -1,5 +1,6 @@
 <?php namespace Codelint\Ringo\Laravel;
 
+use Codelint\Ringo\Laravel\Cache\DefaultCache;
 use Codelint\Ringo\RingoLogger;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -27,6 +28,10 @@ class RingoProvider extends ServiceProvider {
     {
         $this->app->singleton('codelint.ringo.logger', function () {
             return new RingoLogger();
+        });
+
+        $this->app->singleton('codelint.ringo.cache', function () {
+            return new DefaultCache();
         });
     }
 
