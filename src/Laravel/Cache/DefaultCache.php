@@ -1,4 +1,4 @@
-<?php namespace Codelint\Ringo\Laravel\cache;
+<?php namespace Codelint\Ringo\Laravel\Cache;
 
 /**
  * DefaultCache:
