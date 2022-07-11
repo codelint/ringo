@@ -13,7 +13,7 @@ Route::get('/ringo/message/view/{view_id}', function($view_id){
         }
         if(!\Illuminate\Support\Str::startsWith($k, '_'))
         {
-            $arr[] = $v;
+            $arr[$k] = $v;
         }
     }
 
