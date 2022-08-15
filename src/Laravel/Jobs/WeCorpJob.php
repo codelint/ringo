@@ -70,6 +70,8 @@ abstract class WeCorpJob implements ShouldQueue {
         $summary = Arr::get($info, 'description');
         $summary = $summary ?: Arr::get($info, '_summary', 'from ' . gethostname());
         $btntxt = Arr::get($info, 'button', '更多');
+        
+        $summary = $url ? Arr::get($info, 'summary', $summary) : $summary;
 
         if (!$url && count($info) > 1 && 'on' == strtolower(env('RINGO_MSG_DETAIL', 'on')))
         {
