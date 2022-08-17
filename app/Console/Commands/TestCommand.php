@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Codelint\Ringo\App\Console\Commands;
 
 use Codelint\Ringo\Laravel\Facade\Cache;
 use Codelint\Ringo\Laravel\Facade\Ringo;
