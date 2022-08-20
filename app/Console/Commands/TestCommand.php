@@ -4,6 +4,7 @@ namespace Codelint\Ringo\App\Console\Commands;
 
 use Codelint\Ringo\Laravel\Facade\Cache;
 use Codelint\Ringo\Laravel\Facade\Ringo;
+use Codelint\Ringo\Laravel\Sender\SenderFactory;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -50,7 +51,9 @@ class TestCommand extends Command
                 Ringo::mail('hello world');
                 break;
             case 'corp':
-                Ringo::weCorp('hello world');
+                // Ringo::weCorp('hello world');
+                $app = (new SenderFactory())->app();
+                $app->send('hello world!!!');
                 break;
             case 'chat':
                 $uid = $this->option('uid');
