@@ -112,7 +112,7 @@ class RingoLogger {
                 $message = is_string($arguments[0]) ? $arguments[0] : $this->json_encode($arguments[0]);
                 $job = new SendWeCorpMessageJob($message, isset($arguments[1]) ? $arguments[1] : []);
 
-                $job->setChatId(substr($name, 2));
+                $job->setChatId(substr(env('RINGO_CHANNEL_' . strtoupper($name), $name), 2));
                 dispatch($job);
                 return;
             }
@@ -139,7 +139,7 @@ class RingoLogger {
                 foreach ($corps as $corp)
                 {
                     $job = new SendWeCorpMessageJob($message, isset($arguments[1]) ? $arguments[1] : []);
-                    $job->setChatId($corp);
+                    $job->setChatId(env('RINGO_CHANNEL_' . strtoupper($corp), $corp));
                     dispatch($job);
                 }
                 return;
