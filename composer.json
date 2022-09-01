@@ -3,17 +3,18 @@
     "description": "log/notify for laravel project",
     "type": "library",
     "require": {
-        "laravel/framework": "^8.65|~9.2"
+        "laravel/framework": "^8.65|~9.2",
+        "ext-curl": "*"
     },
     "license": "MIT",
     "autoload": {
         "psr-4": {
+            "Codelint\\Ringo\\App\\": "app/",
             "Codelint\\Ringo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\": "app/"
         }
     },
     "authors": [
