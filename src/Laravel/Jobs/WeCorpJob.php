@@ -96,7 +96,7 @@ abstract class WeCorpJob implements ShouldQueue {
                     'articles' => [
                         array(
                             'title' => $message,
-                            'description' => 'from ' . gethostname(),
+                            'description' => strlen($summary) < 144 ? $summary : ('from ' . gethostname()),
                             'url' => $url,
                             'picurl' => $image,
                         )
