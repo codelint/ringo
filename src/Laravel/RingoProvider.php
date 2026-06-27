@@ -4,7 +4,6 @@ use Codelint\Ringo\Laravel\Cache\DefaultCache;
 use Codelint\Ringo\RingoLogger;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Str;
 
 /**
  * RingoProvider:
@@ -44,7 +43,6 @@ class RingoProvider extends ServiceProvider {
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-            ->namespace(Str::ucfirst($this->ns()) . '\Http\Controllers')
             ->group($this->base_dir('routes/web.php'));
     }
 }
